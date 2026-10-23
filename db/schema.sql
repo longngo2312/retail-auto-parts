@@ -1,4 +1,4 @@
--- Retail Auto Parts System -- Phase II schema (PostgreSQL 17)
+-- Retail Auto Parts System -- Phase II schema (PostgreSQL)
 -- Requirement ids in comments refer to Phase I section 7.
 
 CREATE TYPE part_condition  AS ENUM ('new', 'rebuilt');          -- req 12; one condition per part row

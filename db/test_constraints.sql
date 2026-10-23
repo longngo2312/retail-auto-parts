@@ -1,5 +1,5 @@
 -- Smallest thing that fails if the schema's integrity rules break.
--- Run: psql -v ON_ERROR_STOP=1 -f db/test_constraints.sql
+-- Run: psql -U postgres -d autoparts -v ON_ERROR_STOP=1 -f db/test_constraints.sql
 -- Rolls back; leaves the database as it found it.
 BEGIN;
 

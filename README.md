@@ -9,32 +9,35 @@ Phase I (proposal) is submitted. This repository holds Phase II onward.
 ## Layout
 
 ```
-db/schema.sql           tables, constraints, indexes (PostgreSQL 17)
+db/schema.sql           tables, constraints, indexes
 db/seed.sql             sample data, incl. 5,000 generated parts for the req-43 search timing
 db/test_constraints.sql integrity checks; run after loading
-compose.yaml            postgres 17; applies schema then seed on first start
 docs/                   phase reports
 ```
 
 ## Run
 
-```bash
-docker compose up -d
-```
-
-Schema and seed are applied on first start only. Connect:
+Against the local PostgreSQL install (18, at `C:\Program Files\PostgreSQL\18\bin`). Create the
+database and load it:
 
 ```bash
-psql postgresql://autoparts:devonly@localhost:5432/autoparts
+psql -U postgres -c "CREATE DATABASE autoparts"
+psql -U postgres -d autoparts -v ON_ERROR_STOP=1 -f db/schema.sql -f db/seed.sql
 ```
 
 Verify the integrity rules:
 
 ```bash
-psql postgresql://autoparts:devonly@localhost:5432/autoparts -v ON_ERROR_STOP=1 -f db/test_constraints.sql
+psql -U postgres -d autoparts -v ON_ERROR_STOP=1 -f db/test_constraints.sql
 ```
 
-To reload from scratch: `docker compose down -v && docker compose up -d`.
+To reload from scratch, drop and repeat:
+
+```bash
+psql -U postgres -c "DROP DATABASE IF EXISTS autoparts"
+```
+
+The schema was developed and tested against PostgreSQL 17 and uses nothing version-specific.
 
 ## ER diagram
 
