@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getCurrentUserFromRequest } from "./auth";
-import type { AuthPayload } from "./types";
+import type { AuthPayload } from "@/types";
 
 // Small shared helpers so every CRUD route behaves the same way:
 // JSON errors, auth checks, id parsing, partial-update building and

@@ -6,7 +6,7 @@ import {
   COOKIE_NAME,
   authCookieOptions,
 } from "@/lib/auth";
-import type { CustomerUser, EmployeeUser } from "@/lib/types";
+import type { CustomerUser, EmployeeUser } from "@/types";
 
 // POST /api/auth/login
 // Body: { username, password, kind?: "customer" | "employee" }

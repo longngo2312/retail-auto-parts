@@ -1,7 +1,7 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { cookies } from "next/headers";
-import type { AuthPayload } from "./types";
+import type { AuthPayload } from "@/types";
 
 export const COOKIE_NAME = "token";
 const TOKEN_TTL = "7d";

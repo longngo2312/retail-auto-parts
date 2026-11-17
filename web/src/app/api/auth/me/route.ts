@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import pool from "@/lib/db";
 import { getCurrentUserFromRequest } from "@/lib/auth";
-import type { CustomerUser, EmployeeUser } from "@/lib/types";
+import type { CustomerUser, EmployeeUser } from "@/types";
 
 // GET /api/auth/me — return the currently signed-in user (never the
 // password hash), or 401 when there is no valid token.

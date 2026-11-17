@@ -7,7 +7,7 @@ import {
   readJson,
   dbErrorResponse,
 } from "@/lib/api";
-import type { CustomerUser } from "@/lib/types";
+import type { CustomerUser } from "@/types";
 
 // Self-service profile for the signed-in customer.
 // Password changes are deliberately NOT handled here (see BACKEND_TODO.md).

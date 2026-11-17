@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
-import Header from "@/components/Header";
-import { CartProvider } from "@/lib/cart";
+import Header from "@/components/layout/Header";
+import { CartProvider } from "@/context/CartContext";
 import "./globals.css";
 
 export const metadata = {

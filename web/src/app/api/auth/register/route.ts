@@ -6,7 +6,7 @@ import {
   COOKIE_NAME,
   authCookieOptions,
 } from "@/lib/auth";
-import type { CustomerUser } from "@/lib/types";
+import type { CustomerUser } from "@/types";
 
 // POST /api/auth/register — create a customer account.
 // Body: { username, password, first_name, last_name, email, phone, address,
