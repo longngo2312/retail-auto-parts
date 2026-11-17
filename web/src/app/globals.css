@@ -1,0 +1,55 @@
+/* Deliberately minimal — Phase III UIs are functional, not polished. */
+
+body {
+  font-family: sans-serif;
+  margin: 16px;
+  line-height: 1.4;
+}
+
+main {
+  max-width: 1100px;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 12px 0;
+}
+
+th,
+td {
+  border: 1px solid #999;
+  padding: 4px 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+form div {
+  margin-bottom: 8px;
+}
+
+label {
+  display: inline-block;
+  min-width: 160px;
+}
+
+input,
+select,
+textarea {
+  padding: 4px;
+}
+
+button {
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.error {
+  color: #b00020;
+}
+
+.notice {
+  background: #fff8dc;
+  border: 1px solid #d8c95c;
+  padding: 8px;
+  margin: 12px 0;
+}
