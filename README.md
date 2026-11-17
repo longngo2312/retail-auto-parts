@@ -37,7 +37,8 @@ To reload from scratch, drop and repeat:
 psql -U postgres -c "DROP DATABASE IF EXISTS autoparts"
 ```
 
-The schema was developed and tested against PostgreSQL 17 and uses nothing version-specific.
+The schema needs PostgreSQL 15 or later (`UNIQUE NULLS NOT DISTINCT` on `category`); it loads
+cleanly on 18.6.
 
 ## ER diagram
 

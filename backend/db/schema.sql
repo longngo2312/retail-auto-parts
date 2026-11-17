@@ -60,7 +60,7 @@ CREATE TABLE category (                                          -- open questio
   category_id serial PRIMARY KEY,
   parent_id   int REFERENCES category,
   name        text NOT NULL,
-  UNIQUE (parent_id, name)
+  UNIQUE NULLS NOT DISTINCT (parent_id, name)                    -- else top-level names can repeat (PG 15+)
 );
 
 CREATE TABLE manufacturer (
